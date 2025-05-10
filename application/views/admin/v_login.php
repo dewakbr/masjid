@@ -22,8 +22,16 @@
       <p class="login-box-msg">&nbsp;</p>
 
       <form id='form_data'>
+      <div class="input-group mb-3 formreg">
+          <input type="text" class="form-control txnama txinput" name="txnama" placeholder="Nama Pengguna">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
         <div class="input-group mb-3">
-          <input type="email" class="form-control txemail" name="txemail" placeholder="Email">
+          <input type="email" class="form-control txemail txinput" name="txemail" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -31,7 +39,15 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control txpass" name="txpass" placeholder="Password">
+          <input type="password" class="form-control txpass txinput" name="txpass" placeholder="Password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3 formreg">
+          <input type="password" class="form-control txpass2 txinput" name="txpass2" placeholder="Konfirmasi Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -42,6 +58,7 @@
           <!-- /.col -->
           <div class="col-12">
             <button type="button" class="btn btn-primary btn-block btn-login" onclick ='proses()'>Login</button>
+            <button type="button" class="btn btn-primary btn-block btn-reg formreg" onclick ='register()'>Register</button>
           </div>
           <!-- /.col -->
         </div>
@@ -61,6 +78,7 @@
       -->
 
       <a href="<?= base_url();?>" class="text-center">Home</a>
+      <a href="javascript:void(0)" onclick="showform()" class="text-center float-right linkreg">Register</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->

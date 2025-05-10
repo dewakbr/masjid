@@ -21,6 +21,11 @@ class Login extends CI_Controller
         echo epost('email');
         echo '<br>'.epost('password');
     }
+
+    function register(){
+        echo epost('username');
+        echo '<br>'.epost('pass');
+    }
 	
-}
+} 
 ?>
