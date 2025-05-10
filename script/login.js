@@ -77,5 +77,4 @@ function showform(){
       $('.btn-login').show()
     }
 
-    console.log(show)
 }
