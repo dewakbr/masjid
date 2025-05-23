@@ -22,7 +22,14 @@ function proses() {
       password: $('.txpass').val()
     },
     function(data, status){
-      alert("Data: " + data + "\nStatus: " + status);
+      //alert("Data: " + data + "\nStatus: " + status);
+	  // mendapatkan hasil keluaran dari backend
+	  if(data.status == 'err'){
+		  alert(data.pesan)
+	  }else{
+		  // mengarahkan URL ke halaman default, atau bisa dirahkan ke URL yg lain
+		  window.location.href = base_url
+	  }
     },'json');
     
 }
